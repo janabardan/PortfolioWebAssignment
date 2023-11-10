@@ -1,0 +1,257 @@
+*{
+    font-family: monospace;
+    font-size: 18;
+}
+.icon{
+
+    display: inline-block;
+    /* padding-top: 1px; */
+    vertical-align: middle;
+    padding-right: 10px;
+}
+.navbar {
+    position: fixed;
+    height: 6%;
+    width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 0%;
+    padding-top: 2%;
+    z-index: 100;
+    background-color: #870073;
+    font-family: monospace;
+    color: #f4f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-content,
+.right-content {
+    display: flex;
+    align-items: center; 
+}
+
+.name,
+.occupation,
+.menu-text,
+.material-symbols-outlined {
+    font-size: 16px;
+    margin-right: 10px; 
+}
+
+.dropdown-menu {
+    cursor: pointer;
+    background: #870073;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center; 
+    line-height: 35px;
+   
+}
+.dropdown-content{
+    right: 3%;
+}
+.dropdown-menu .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: #870073;
+    /* min-width: 160px; */
+    width: 105px;
+    line-height: 35px;
+}
+
+.dropdown-menu ul {
+    margin: 0;
+    padding: 0;
+}
+.dropdown-content a{
+    text-decoration: none;
+}
+.dropdown-menu ul li {
+    list-style-type: none;
+}
+
+.dropdown-menu:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-menu li:hover {
+    background: #f4f0f0;
+    color:#870073;
+}
+
+.menu-item a {
+    color: #f4f0f0;
+    text-decoration: none;
+}
+
+.menu-item a:hover {
+    color: #870073;
+}
+
+.menu-item:hover {
+    background-color: #f4f0f0;
+    color: #870073;
+}
+
+.container {
+    height: 100vh;
+
+    padding-top: 4%;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    background-color: #f4f0f0;
+}
+.container4 {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: #f4f0f0;
+    color: #4f1d47;
+    font-weight: bold;
+   
+}
+
+.left-side {
+    position: fixed;
+ 
+    width: 16.3%;
+    border-right: 2px solid #870073;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.right-side {
+    width: 82%;
+    margin-left: 18%;
+}
+
+
+#wanda {
+    height: 25%;
+    width: 50%;
+    position: center;
+    padding-left: 20%;
+}
+
+ .name {
+    color: #f4f0f0;
+    font-size: 18px;
+    padding: 10px 16px;
+    text-align: left;
+    /* padding-top: 0%; */
+}
+
+.occupation {
+    color: #f4f0f0;
+    font-size: 16px;
+    padding: 0 16px;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button {
+    font-size: 18px;
+    padding: 5px 10px;
+    margin: 2%;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #4f1d47;
+    transition: background-color 0.3s ease;
+    border: 2px solid #870073;
+
+
+}
+
+.button:hover {
+    background-color: #870073;
+    color: #fff;
+}
+
+
+body {
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f0f0;
+}
+.container2{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+    /* background-color: #f4f0f0; */
+}
+.contactinfo {
+    margin-top: 15%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contactitem span{
+    margin-top: 2%;
+    font-family: monospace;
+    font-size: medium;
+}
+.contactitem{
+    text-align: center;
+    margin-right: 3%; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+.contactitem p, span, a{
+    color: #4f1d47;
+}
+.contactitem a,.contactitem span{
+    font-style: italic;
+}
+.container3{
+    width: inherit;
+    height: inherit;
+    padding-top: 5%;
+  
+    background-color: #f4f0f0;
+}
+.myimg{
+    border-radius: 5%;
+    margin-top: 5%;
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    cursor: pointer;
+
+}
+.img{
+    display: inline-block;
+    margin-left: 5%;
+    padding-top: 5%;
+}
+
+.big-img{
+    z-index: 10;
+    width: 35%;
+    position: absolute;
+    left:35%;
+    top: 20%;
+    display: none;
+
+}
+.myimg:focus + #big-1,
+.myimg:focus + #big-2,
+.myimg:focus + #big-3{
+    display: block;
+}
