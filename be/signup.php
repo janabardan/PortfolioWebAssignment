@@ -17,8 +17,8 @@ $user->birthdate=VarExist($_POST["birthdate"]);
 
 
 if (InsertUserToFilefromObject($user)) {
-    echo "Signup successful!";
     header("location:../index.php");
+    echo "Signup successful!";
 } else {
     echo "Signup failed!";
 }

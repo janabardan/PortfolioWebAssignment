@@ -60,7 +60,7 @@ $images = json_decode($jsonimg, true)['images'];
 
 <div class="container3">
     <?php for ($i = 0; $i < count($images); $i++): ?>
-        <div class="img" style="display: inline-block; padding-top: 5%">
+        <div class="img" style="display: inline-block; padding-top: 7%">
             <img src="<?= $images[$i]['url'] ?>" alt="<?= $images[$i]['alt'] ?>" class="myimg"  tabindex="0">
             <img src="<?= $images[$i]['url'] ?>" alt="<?= $images[$i]['alt'] ?>" class="big-img" id="big-<?= $images[$i]['id'] ?>">
         </div>
