@@ -1,0 +1,161 @@
+
+<html>
+    <head>
+        <link rel = "stylesheet" type = "text/css" href="../css/portfolio.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        
+        <script>
+            // alert("my first javascript!"); 
+         </script>
+        <title>
+            Sign Up
+        </title>
+        <style>
+            .title{
+                padding-top: 7%;
+            }
+            h1{
+                
+                font-weight: bold;
+                color: #4f1d47;
+            }
+            .txtfield{
+                color: #870073;
+                border-radius: 7%;
+                border: 2px solid #f4f0f0;
+            }
+            label{
+                color:#4f1d47;
+                font-weight: bold;
+            }
+            .date{
+                color:#870073;
+                border: 2px solid #f4f0f0;
+                border-radius: 7%;
+            }
+            .mButton{
+                background-color:#870073 ;
+                color: #f4f0f0;
+                padding: 14px 20px;
+                border: none;
+                cursor: pointer;
+                
+                text-align: center;
+            }
+            input[type='radio']:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #f4f0f0;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid #4f1d47;
+    }
+
+    input[type='radio']:checked:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #870073;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid #f4f0f0
+    }
+             </style>
+    </head>
+    <body>
+               
+        <nav class="navbar">
+            <div class="left-content">
+                <span class="name">Jana Al Bardan</span>
+                <span class="occupation">Computer Science Student</span>
+            </div>
+        </nav>
+        <div class="title">
+            <h1 style="text-align: center;">Welcome to my Portfolio!</h1>
+            <h1 style="text-align: center;">Kindly Sign Up</h1>
+        </div>
+        <div class="paragraph" style="border:0; text-align: center;">
+            <form action="../be/signup.php" method="POST" name="signup-form">
+                <label for="un">Full Name:</label>
+                <br>
+                <input type="text" name="fullname" class="txtfield" style=" color:#870073;">
+                <br>
+                <label for="un">Username:</label>
+                <br>
+                <input type="text" name="username" class="txtfield" style=" color:#870073;">
+                <br>
+                <label for="pass">Password:</label>
+                <br>
+                <input type="password" name="pass" class="txtfield" style=" color:#870073;">
+                <br>
+                <label for="pass">Confirm Password:</label>
+                <br>
+                <input type="password" name="confirmPassword" class="txtfield" style=" color:#870073;">
+                
+                <br><br>
+                <label for="birthdate">Select your birthdate:</label>
+                <input type="date" id="birthdate" name="birthdate" class="date">
+                <br><br>
+                <label for="r-male">
+                    <input type="radio" name="gender" checked id="r-male" value="m" class="gen">
+                    <span>Male</span>
+                </label>
+                <label for="r-female">
+                    <input type="radio" name="gender" id="r-female" value="f" class="gen">
+                    <span>Female</span>
+                </label>
+                <label for="r-other">
+                    <input type="radio" name="gender" id="r-other" value="o" class="gen">
+                    <span>Other</span>
+                </label>
+                <br><br>
+
+                <input type="button" value="Sign Up" class="mButton" onclick="SignUp()">
+                <input type="button" value="Cancel" class="mButton" onclick="ClearForm()">
+            </form>
+        </div>
+    
+<script>
+    function SignUp(){
+        var mForm=document.querySelector("form[name='signup-form']");
+        var fullname=mForm.elements["fullname"].value;
+        var username=mForm.elements["username"].value;
+        var pass=mForm.elements["pass"].value;
+        var confPass=mForm.elements["confirmPassword"].value;
+        var sex=mForm.elements["gender"].value;
+        var birthdate=mForm.elements["birthdate"].value;
+       
+        console.log("fullname:"+fullname);
+        console.log("username:"+username);
+        console.log("pass:"+pass);
+        console.log("gender:"+sex);
+        console.log("birthdate:"+birthdate);
+
+        if ((pass!=confPass)||(pass==""))
+            alert("Passwords must be equal.");
+        else
+            mForm.submit();        
+    }
+    function ClearForm(){
+        var mForm=document.querySelector("form[name='signup-form']");
+        mForm.elements["fullname"].value="";
+        mForm.elements["username"].value="";
+        mForm.elements["pass"].value="";
+        mForm.elements["confirmPassword"].value="";
+        mForm.elements["gender"].value="m";
+        mForm.elements["birthdate"].value=null;
+      
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+    "images": [
+        {"id": 1, "url": "../images/poof.jpg", "alt": "poof is here"},
+        {"id": 2, "url": "../images/timmy.jpg", "alt": "timmy is here"},
+        {"id": 3, "url": "../images/cosmo.jpg", "alt": "cosmo is here"}
+    ]
+}

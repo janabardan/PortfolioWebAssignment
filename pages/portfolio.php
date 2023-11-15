@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if (!isset($_SESSION["username"])){
+        header("location:../index.php");
+    }
+?>
 <html>
 
 <head>
@@ -11,26 +17,29 @@
 
 <body>
     
-    
-    <nav class="navbar">
-        <div class="left-content">
-            <span class="name">Jana Al Bardan</span>
-            <span class="occupation">Computer Science Student</span>
-        </div>
-        <div class="right-content">
-            <div class="dropdown-menu">
-                <span class="menu-text" style="color: #f4f0f0;">MENU</span>
-                <span class="material-symbols-outlined" style="color: #f4f0f0;">menu</span>
-                <div class="dropdown-content menu-rtl">
-                    <ul>
-                        <li class = "menu-item"><a href="portfolio.html">Resume</a></li>
-                        <li class = "menu-item"><a href="contact.html">Contact Me</a></li>
-                        <li class = "menu-item"><a href="gallery.html">Gallery</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
+<nav class="navbar">
+            <div class="left-content" style="margin-left:1%">
+            <div class="dropdown-menu" style="padding-left: 1%;">
+                    <span class="material-symbols-outlined" style="color: #f4f0f0;">menu</span>
+                    <span class="menu-text" style="color: #f4f0f0;">MENU</span>
+                    <div class="dropdown-content menu-rtl">
+                        <ul>
+                            <li class = "menu-item"><a href="portfolio.php">Resume</a></li>
+                            <li class = "menu-item"><a href="contact.php">Contact Me</a></li>
+                            <li class = "menu-item"><a href="gallery.php">Gallery</a></li>
+                        </ul>
+                    </div>
+                </div>  
+           </div> 
+           <div style="float:right; margin-right:1%">
+        <?php
+        if (isset($_SESSION["username"])) {
+            echo '<span style="margin-left: 0%; padding-bottom: 0%; margin-bottom: 0%; color:#f4f0f0;">Welcome, ' . $_SESSION["fullname"] . '! ';
+            echo '<br><a href="../be/logout.php" style="text-decoration: none; color: #f4f0f0">Logout <i class="fas fa-sign-out-alt"></i></a></span>';
+        }
+        ?>
+    </div>
+        </nav>
     
 
 

@@ -1,0 +1,51 @@
+[
+    {
+        "fullname": "Jana Al Bardan",
+        "username": "jana.bardan",
+        "password": "password",
+        "sex": "f",
+        "birthdate": "2004-04-30"
+    },
+    {
+        "fullname": "Jana Al Bardan",
+        "username": "janabardan",
+        "password": "crazy",
+        "sex": "f",
+        "birthdate": "2023-11-01"
+    },
+    {
+        "fullname": "Jalal El Zein",
+        "username": "jalal.elzein",
+        "password": "jllpss",
+        "sex": "m",
+        "birthdate": "2023-07-13"
+    },
+    {
+        "fullname": "Jalal El Zein",
+        "username": "jalal.elzein",
+        "password": "jllpss",
+        "sex": "m",
+        "birthdate": "2023-07-13"
+    },
+    {
+        "fullname": "Kimo Hal",
+        "username": "kimoStar",
+        "password": "gorgeous",
+        "sex": "m",
+        "birthdate": "2004-04-28"
+    },
+    {
+        "fullname": "Kamal Dbouk",
+        "username": "kamaldbouk",
+        "password": "ilovekamal123",
+        "sex": "o",
+        "birthdate": "2004-01-13"
+    },
+    {
+        "fullname": "Kamal Dbouk",
+        "username": "kamdbouk",
+        "password": "anahmar",
+        "sex": "m",
+        "birthdate": "2023-11-01"
+    }
+]
